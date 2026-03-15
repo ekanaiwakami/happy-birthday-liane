@@ -1,0 +1,19 @@
+@import 'lib/vars';
+@import 'lib/mixin';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: $white; 
+    overflow: hidden;
+    height: 100%;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
