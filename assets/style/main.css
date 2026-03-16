@@ -9,7 +9,7 @@ html, body {
 
 video {
   position: fixed;
-  width: 100vw;
+  width: 50vw;
   height: auto;
   max-height: 100vh;
   -o-object-fit: contain;
