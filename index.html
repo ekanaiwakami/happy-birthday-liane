@@ -18,9 +18,42 @@
 </head>
 
 <body>
-    <video autoplay muted loop playsinline>
+    <video id="birthdayVideo" autoplay muted loop playsinline>
         <source src="assets/video/Comp1.mp4" type="video/mp4">
     </video>
+
+    <script>
+        const video = document.getElementById('birthdayVideo');
+
+        // Función para desbloquear audio
+        function unmuteVideo() {
+            if(video.muted) {
+                video.muted = false;
+                video.play();
+            }
+        }
+
+        // Funciones para pausar/reproducir mientras se mantiene pulsado
+        function pauseVideo() {
+            video.pause();
+        }
+
+        function playVideo() {
+            video.play();
+        }
+
+        // Evento: desbloquear audio con un toque
+        document.body.addEventListener('click', unmuteVideo);
+        document.body.addEventListener('touchstart', unmuteVideo);
+
+        // Evento: mantener pulsado para pausar (móvil y escritorio)
+        document.body.addEventListener('mousedown', pauseVideo);
+        document.body.addEventListener('touchstart', pauseVideo);
+
+        // Evento: soltar para volver a reproducir
+        document.body.addEventListener('mouseup', playVideo);
+        document.body.addEventListener('touchend', playVideo);
+    </script>
 
     <script src="/app/main.js"></script>
 </body>
