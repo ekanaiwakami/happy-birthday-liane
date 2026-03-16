@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   background: #ffffff;
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
 }
 
 video {
@@ -12,7 +12,7 @@ video {
   left: 0;
   width: 100vw;
   height: auto;
-  max-height: 100dvh;
+  max-height: 100vh;
   -o-object-fit: contain;
      object-fit: contain;
 }/*# sourceMappingURL=main.css.map */
