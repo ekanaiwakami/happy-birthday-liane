@@ -11,9 +11,9 @@ video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10vw;
+  width: 100vw;
   height: auto;
-  max-height: 10vh;
+  max-height: 100vh;
   -o-object-fit: contain;
      object-fit: contain;
 }/*# sourceMappingURL=main.css.map */
