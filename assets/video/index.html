@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <title>Happy birthday Liane</title>
+
+    <meta name="description" content="A small birthday surprise video for Liane." />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon.png" />
+
+    <link rel="stylesheet" href="/assets/style/main.css" />
+    <link href="/assets/style/main.css.map" />
+</head>
+
+<body>
+    <iframe 
+        src="https://www.youtube.com/embed/69xzSuFU8Eg?autoplay=1&mute=1&loop=1&playlist=69xzSuFU8Eg&controls=0&modestbranding=1"
+        allow="autoplay; fullscreen">
+    </iframe>
+
+
+    <script>
+        const video = document.getElementById('birthdayVideo');
+
+        // Función para desbloquear audio 
+        function unmuteVideo() {
+            if(video.muted) {
+                video.muted = false;
+                video.play();
+            }
+        }
+
+        // Funciones para pausar/reproducir mientras se mantiene pulsado
+        function pauseVideo() {
+            video.pause();
+        }
+
+        function playVideo() {
+            video.play();
+        }
+
+        // Evento: desbloquear audio con un toque
+        document.body.addEventListener('click', unmuteVideo);
+        document.body.addEventListener('touchstart', unmuteVideo);
+
+        // Evento: mantener pulsado para pausar (móvil y escritorio)
+        document.body.addEventListener('mousedown', pauseVideo);
+        document.body.addEventListener('touchstart', pauseVideo);
+
+        // Evento: soltar para volver a reproducir
+        document.body.addEventListener('mouseup', playVideo);
+        document.body.addEventListener('touchend', playVideo);
+    </script>
+
+    <script src="/app/main.js"></script>
+</body>
+
+</html>
